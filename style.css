@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+html {
+    color-scheme: light dark;
+}
+
+:root {
+    --text: hsl(180, 20%, 4%);
+    --background: hsl(189, 23%, 94%);
+    --primary: hsl(220, 22%, 48%);
+    --secondary: hsl(251, 22%, 85%);
+    --accent: hsl(250, 22%, 28%);
+
+    --ff-base:'Roboto', sans-serif;
+
+    font-size: 62.5%;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --text: hsl(189, 23%, 94%);
+        --background: hsl(180, 20%, 4%);
+        --primary: hsl(220, 22%, 48%);
+        --secondary: hsl(250, 21%, 11%);
+        --accent: hsl(250, 22%, 28%);
+    }
+
+    svg {
+        fill:var(--secondary);
+    }
+
+    svg:hover {
+        fill:#000000;
+    }
+
+    .div-button button:hover {
+        color:#ffffff;
+      }
+      
+      .div-button button:hover svg {
+        fill: #ffffff;
+      }
+
+}
+
+
+
+html,
+body {
+    font-size: 1.6rem;
+    overflow-y: hidden;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--ff-base);
+    background: linear-gradient(var(--primary),var(--secondary));
+    min-height: 100vh;
+}
+
+main{
+ margin-top:3.2rem;
+
+}
+
+.wrapper{
+    width: min(100% - 3rem, 50ch);
+    margin-inline:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+header img {
+    max-width: 18rem;
+    border-radius: 50%;
+    margin-inline: auto;
+    display:block;
+    border:3px solid var(--text);
+    transition: .5s;
+}
+
+header img:hover{
+    border:3px solid var(--primary);
+    transition: .5s;
+}
+
+header p{
+    padding:1.6rem 0px;
+    font-size:2.4rem;
+    font-weight: 700;
+    color:var(--text);
+   
+}
+
+section {
+    display:grid;
+    gap: 1.6rem;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border:2px solid #000000;
+    padding:1.2rem 1.6rem;
+    border-radius:1.2rem;
+    font-size:1.4rem;
+    font-weight: 400;
+    font-family: var(--ff-base);
+
+    color:var(--background);
+    letter-spacing: .2rem;
+
+    box-shadow:-4px 4px 0px rgba(0, 0, 0, .4);
+
+    background: var(--text);
+
+    transition: all .2s ease-out;
+}
+
+.div-button button:hover {
+    background: var(--primary);
+  }
+  
+
+
+  footer{
+    text-align: center;
+    margin-top:2.4rem;
+    color:var(--text);
+  }
+
+
+
+
+
+  
+  
+
+
